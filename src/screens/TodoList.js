@@ -8,6 +8,7 @@ const initialItems = [{title: 'First Item'}];
 export default function TodoList() {
   const [itemList, setItemList] = useState(initialItems);
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [isUpdate, setIsUpdate] = useState(false);
   const [currentTitle, setCurrentTitle] = useState('');
 
   const renderItem = ({item, index}) => {
@@ -21,6 +22,7 @@ export default function TodoList() {
   };
 
   const onItemClick = (item, index) => {
+    setIsUpdate(true);
     setSelectedIndex(index);
     setCurrentTitle(item.title);
   };
@@ -29,11 +31,12 @@ export default function TodoList() {
       return;
     }
     let tempArray = [...itemList];
-    if (selectedIndex) {
+    if (isUpdate) {
       tempArray[selectedIndex].title = currentTitle;
     } else {
       tempArray.push({title: currentTitle});
     }
+    setCurrentTitle('');
     setItemList(tempArray);
   };
   const onRemove = index => {
@@ -54,6 +57,7 @@ export default function TodoList() {
         value={currentTitle}
         onChange={value => setCurrentTitle(value)}
         onAddClick={onAction}
+        isUpdate={isUpdate}
       />
     </SafeAreaView>
   );

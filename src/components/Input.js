@@ -1,8 +1,14 @@
 import React from 'react';
-import {TextInput, View, StyleSheet, Button} from 'react-native';
+import {
+  TextInput,
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 export default function Input(props) {
-  const {onChange, value, onAddClick} = props;
+  const {onChange, value, onAddClick, isUpdate} = props;
   return (
     <View style={styles.container}>
       <TextInput
@@ -11,8 +17,11 @@ export default function Input(props) {
           onChange(e);
         }}
         value={value}
+        placeholder="Enter here"
       />
-      <Button title="ADD" style={styles.button} onPress={() => onAddClick()} />
+      <TouchableOpacity style={styles.button} onPress={() => onAddClick()}>
+        <Text style={styles.title}>{isUpdate ? 'UPDATE' : 'ADD'}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -24,14 +33,15 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     fontWeight: '500',
-    width: '70%',
+    flex: 1,
   },
   button: {
-    fontSize: 25,
     backgroundColor: 'darkblue',
-    fontWeight: '500',
-    width: '30%',
+    width: 100,
+    height: 60,
     borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   container: {
     padding: 10,
@@ -43,5 +53,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
+    color: 'white',
+    fontWeight: '500',
   },
 });
