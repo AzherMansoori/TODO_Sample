@@ -5,7 +5,6 @@ export default function Header(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>{props.title}</Text>
-      <Text style={styles.header}>{props.title}</Text>
     </View>
   );
 }

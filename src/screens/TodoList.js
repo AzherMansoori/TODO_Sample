@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, FlatList, SafeAreaView} from 'react-native';
 import TodoItem from '../components/TodoItem';
 import Header from '../components/Header';
@@ -64,6 +64,7 @@ export default function TodoList() {
         data={itemList}
         renderItem={renderItem}
         keyExtractor={item => item.id}
+        key={item => item.id}
         extraData={itemList}
       />
       <Footer
