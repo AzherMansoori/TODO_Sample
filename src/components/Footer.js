@@ -7,11 +7,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default function Input(props) {
+export default function Footer(props) {
   const {onChange, value, onAddClick, isUpdate} = props;
   return (
     <View style={styles.container}>
       <TextInput
+        id="footer-input"
         style={styles.input}
         onChangeText={e => {
           onChange(e);
@@ -19,7 +20,10 @@ export default function Input(props) {
         value={value}
         placeholder="Enter here"
       />
-      <TouchableOpacity style={styles.button} onPress={() => onAddClick()}>
+      <TouchableOpacity
+        id="add-button"
+        style={styles.button}
+        onPress={() => onAddClick()}>
         <Text style={styles.title}>{isUpdate ? 'UPDATE' : 'ADD'}</Text>
       </TouchableOpacity>
     </View>

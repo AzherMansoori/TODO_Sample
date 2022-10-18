@@ -9,7 +9,7 @@ export default function TodoItem(props) {
         <View style={styles.circleView} />
         <Text style={styles.title}>{item.title}</Text>
       </View>
-      <Text onPress={onRemove} style={styles.title}>
+      <Text className="remove-text" onPress={onRemove} style={styles.title}>
         Remove
       </Text>
     </TouchableOpacity>

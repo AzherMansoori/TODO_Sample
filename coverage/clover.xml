@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1666090050433" clover="3.2.0">
+  <project timestamp="1666090050433" name="All files">
+    <metrics statements="16" coveredstatements="15" conditionals="14" coveredconditionals="10" methods="8" coveredmethods="7" elements="38" coveredelements="32" complexity="0" loc="16" ncloc="16" packages="1" files="3" classes="3"/>
+    <file name="Footer.js" path="C:\Users\azmansoo\Documents\RNDemo\todo_poc\src\components\Footer.js">
+      <metrics statements="7" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="4" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+    </file>
+    <file name="Header.js" path="C:\Users\azmansoo\Documents\RNDemo\todo_poc\src\components\Header.js">
+      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+    </file>
+    <file name="TodoItem.js" path="C:\Users\azmansoo\Documents\RNDemo\todo_poc\src\components\TodoItem.js">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

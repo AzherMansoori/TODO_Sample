@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Rendering renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 50,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "darkblue",
+        "fontSize": 25,
+        "fontWeight": "bold",
+        "marginLeft": 5,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "darkblue",
+        "fontSize": 25,
+        "fontWeight": "bold",
+        "marginLeft": 5,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Header Rendering should match to snapshot 1`] = `ShallowWrapper {}`;
